@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1:wght@400;600;800&display=swap">
 <style>
 body{margin:0}*{box-sizing:border-box}
-/* 한 줄 세로 흐름: 가게 이름 → 가격표 → 국산 안내 → 연락처 */
+/* 한 줄 세로 흐름: 가게 소개 → 가격 → 선물세트 → 보관법 → 연혁 → 오시는 길 */
 :root{
   --bg:#fbf7ee; --fg:#2b2117; --muted:#7a6a55;
   --oil:#c98a12; --perilla:#5d6b2f; --line:#e7dcc6; --card:#fffdf8;
@@ -45,15 +45,25 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0 0 12px}
 .empty{color:var(--muted);font-weight:400}
 .map{display:block;margin-top:20px;text-align:center;background:#03c75a;color:#fff;font-weight:800;text-decoration:none;border-radius:12px;padding:14px}
 .map:focus-visible{outline:3px solid var(--oil);outline-offset:3px}
+.sub{font-weight:800;font-size:18px;margin:0 0 8px}
+.hint{color:var(--muted);font-size:14px;font-weight:400;margin:0 0 12px}
+.gifts .row span:first-child{color:var(--fg)}
+.gifts b{color:var(--oil);margin-right:6px}
+.tag{font-style:normal;font-size:12px;font-weight:600;color:var(--oil);border:1px solid var(--oil);border-radius:999px;padding:0 8px;margin-left:4px;white-space:nowrap}
+.tbd{color:var(--muted);font-size:14px;white-space:nowrap}
+.store{display:grid;gap:8px}.store p{margin:0}.store b{margin-right:6px}
+.history{list-style:none;margin:0;padding:0;display:grid;gap:10px;border-left:2px solid var(--line);padding-left:16px}
+.history span{display:inline-block;width:3.2em;font-weight:800;color:var(--oil);font-variant-numeric:tabular-nums}
 footer{font-size:13px;color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <span class="since">시장에서 30년</span>
+    <span class="since">SINCE 1975 · 3대째</span>
     <h1>춘발이네<br>제천기름집</h1>
-    <p class="lead">30년 동안 시장에서 직접 볶고 짜 온 참기름·들기름입니다.</p>
+    <p class="sub">대덕 &amp; 제천기름집</p>
+    <p class="lead">1975년부터 3대째, 모란시장 백년기름 특화거리에서 전통 방식 그대로 볶고 짜는 참기름·들기름입니다.</p>
   </header>
 
   <section>
@@ -73,17 +83,49 @@ footer{font-size:13px;color:var(--muted);text-align:center}
         <h3>국산</h3>
         <div class="row"><span>국산 참기름 1병</span><span class="price">25,000원</span></div>
         <div class="row"><span>국산 들기름 1병</span><span class="price">20,000원</span></div>
-        <p class="note">말 단위는 전화로 문의해 주세요.</p>
+        <p class="note">말 단위는 가게로 문의해 주세요.</p>
       </div>
     </div>
+  </section>
+
+  <section>
+    <h2>선물세트</h2>
+    <p class="hint">돌·결혼 답례품, 행사 답례품, 설·추석 선물</p>
+    <div class="item gifts">
+      <div class="row"><span><b>1호</b> 참기름 + 들기름 + 참깨볶음 <em class="tag">국산</em></span><span class="tbd">가격 준비 중</span></div>
+      <div class="row"><span><b>2호</b> 참기름 + 들기름 <em class="tag">국산</em></span><span class="tbd">가격 준비 중</span></div>
+      <div class="row"><span><b>3호</b> 참기름 또는 들기름 1병</span><span class="tbd">가격 준비 중</span></div>
+      <div class="row"><span><b>4호</b> 참기름 + 들기름 + 참깨볶음</span><span class="tbd">가격 준비 중</span></div>
+      <div class="row"><span><b>5호</b> 참기름 + 들기름</span><span class="tbd">가격 준비 중</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>보관법</h2>
+    <div class="store">
+      <p><b>참기름</b> 직사광선을 피해 상온(15~25°C)에 두세요.</p>
+      <p><b>들기름</b> 짙은 색 병에 담아 냉장(0~10°C) 보관하세요. 공기나 물기에 닿으면 빨리 상해요.</p>
+      <p class="hint">바닥에 가라앉은 침전물은 전통 방식으로 짠 표시예요. 흔들어 드시면 더 부드럽고 고소해요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>걸어온 길</h2>
+    <ol class="history">
+      <li><span>1975</span>1대 이장화 대표, 대원기름집으로 시작</li>
+      <li><span>1990</span>대덕상회로 이전</li>
+      <li><span>2005</span>2대 이춘발 대표 승계, 춘발이네 제천참기름집 상표 등록</li>
+      <li><span>2011</span>춘발이네 제천기름집 2호점</li>
+      <li><span>2018</span>3대 신윤수 대표 승계</li>
+      <li><span>2023</span>중소벤처기업부 인증 백년소공인 선정</li>
+    </ol>
   </section>
 
   <section class="contact">
     <h2>찾아오시는 길</h2>
     <dl>
-      <dt>전화</dt><dd class="empty">준비 중</dd>
-      <dt>주소</dt><dd>경기 성남시 중원구 둔촌대로69번길 8</dd>
-      <dt>영업시간</dt><dd class="empty">준비 중</dd>
+      <dt>주소</dt><dd>경기 성남시 중원구 둔촌대로69번길 8<br><span class="hint">모란시장 백년기름 특화거리</span></dd>
+      <dt>영업시간</dt><dd>아침 9:00 ~ 저녁 6:00<br><span class="hint">매주 일요일 휴무(장날 포함) · 공휴일 영업</span></dd>
     </dl>
     <a class="map" href="https://naver.me/5bClptdc" target="_blank" rel="noopener">네이버 지도에서 보기</a>
   </section>
