@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="1975년부터 3대째, 모란시장 백년기름 특화거리의 참기름·들기름집">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chunbal-sesame.github.io/">
+<meta property="og:title" content="춘발이네 제천기름집">
+<meta property="og:description" content="1975년부터 3대째, 모란시장에서 전통 방식으로 짜는 참기름·들기름">
+<meta property="og:image" content="https://chunbal-sesame.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#fbf7ee">
 <title>춘발이네 제천기름집</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1:wght@400;600;800&display=swap">
 <style>
@@ -19,7 +28,7 @@ body{margin:0}*{box-sizing:border-box}
 :root[data-theme="dark"]{
   --bg:#1c1610; --fg:#f2e8d6; --muted:#b3a288; --oil:#e7a92d; --perilla:#a3b56a; --line:#3a2f22; --card:#241c14; color-scheme:dark}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6}
-.wrap{max-width:560px;margin:0 auto;padding-block:48px 64px;
+.wrap{max-width:560px;margin:0 auto;padding-block:48px 120px;
   padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));
   display:flex;flex-direction:column;gap:40px}
 header{text-align:left}
@@ -54,6 +63,11 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;margin:0 0 12px}
 .store{display:grid;gap:8px}.store p{margin:0}.store b{margin-right:6px}
 .history{list-style:none;margin:0;padding:0;display:grid;gap:10px;border-left:2px solid var(--line);padding-left:16px}
 .history span{display:inline-block;width:3.2em;font-weight:800;color:var(--oil);font-variant-numeric:tabular-nums}
+.hero{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:16px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:5;background:linear-gradient(to top,var(--bg) 70%,transparent);
+  padding:20px max(20px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px))}
+.dock a{display:block;max-width:560px;margin:0 auto;text-align:center;background:#03c75a;color:#fff;font-weight:800;font-size:17px;text-decoration:none;border-radius:14px;padding:15px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.dock a:focus-visible{outline:3px solid var(--oil);outline-offset:3px}
 footer{font-size:13px;color:var(--muted);text-align:center}
 </style>
 </head>
@@ -65,6 +79,7 @@ footer{font-size:13px;color:var(--muted);text-align:center}
     <p class="sub">대덕 &amp; 제천기름집</p>
     <p class="lead">1975년부터 3대째, 모란시장 백년기름 특화거리에서 전통 방식 그대로 볶고 짜는 참기름·들기름입니다.</p>
   </header>
+  <img class="hero" src="og.jpg" alt="가게에 진열된 참기름·들기름과 선물세트" width="1200" height="630">
 
   <section>
     <h2>가격</h2>
@@ -131,6 +146,9 @@ footer{font-size:13px;color:var(--muted);text-align:center}
   </section>
 
   <footer>춘발이네 제천기름집</footer>
+</div>
+<div class="dock">
+  <a href="https://naver.me/5bClptdc" target="_blank" rel="noopener">네이버 지도 길찾기</a>
 </div>
 </body>
 </html>
